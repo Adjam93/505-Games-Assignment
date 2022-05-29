@@ -1,0 +1,45 @@
+/*Screen sizes at 400px or larger*/
+@mixin atExtraSmall {
+
+    @media (min-width: 25em) {
+        @content;
+    }
+
+}
+
+/*Screen sizes at 528px or larger*/
+@mixin atSmall {
+
+    @media (min-width: 33em) {
+        @content;
+    }
+
+}
+
+/*Screen sizes at 800px or larger*/
+@mixin atMedium {
+
+    @media (min-width: 50em) {
+        @content;
+    }
+
+}
+
+/*Screen sizes at 1040px or larger*/
+@mixin atLarge {
+
+    @media (min-width: 65em) {
+        @content;
+    }
+
+}
+  
+@mixin containerWidth($padding){
+
+    width: calc(100% - $padding);
+    max-width: 1100px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    
+}

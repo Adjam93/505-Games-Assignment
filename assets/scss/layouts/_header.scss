@@ -1,0 +1,41 @@
+@use '../abstracts' as a;
+
+header{
+
+    nav{
+        padding: 1.25em 0 1.75em 0;
+        
+        ul{
+
+            display: grid;
+            grid-auto-flow: column;
+            place-content: stretch;
+            place-items: center;
+            grid-template-columns: auto;
+            grid-template-columns: repeat(6, 1fr);
+
+            li{
+
+                grid-column-start: span 2;
+
+                &:first-child{
+                    justify-self: end;
+                }
+                &:last-child{
+                    justify-self: start;
+                }
+
+
+                a{
+                    color: var(--clr-accent);
+                    font-size: var(--fs-medium);
+
+                    @include a.atExtraSmall{
+                        font-size: var(--fs-large);
+                    }
+                }
+            }
+        }
+    }
+}
+

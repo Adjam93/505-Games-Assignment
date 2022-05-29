@@ -1,0 +1,40 @@
+@use '../abstracts' as a;
+
+/*Set font-families, font-weights, font-sizes, etc. here*/
+
+@font-face{
+    font-family: "DIN-Condensed";
+    src: local("DIN Condensed Bold"),
+         url("assets/fonts/DIN-Condensed-Bold.woff") format("woff");
+    font-display: swap;
+
+}
+
+@font-face{
+    font-family: "Myriad-Pro";
+    src: local("Myriad Pro Regular"),
+         url("assets/fonts/Myriad-Pro-Regular.woff") format("woff");
+    font-display: swap;
+}
+
+:root {
+    --ff-body: "DIN-Condensed", sans-serif;
+    --ff-heading: "Myriad-Pro", sans-serif;
+
+    --fs-xl: clamp(2.25rem, 2vw + 1rem, 5rem);
+    --fs-large: 1.65rem;
+    --fs-medium: 1.125em;
+    --fs-base: 1rem;
+    --fs-small: 0.85rem;
+
+}
+
+@include a.atMedium {
+
+    :root {
+
+        --fs-large: 2rem;
+        --fs-medium: 1.25rem;
+        
+    }
+}

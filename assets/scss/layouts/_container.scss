@@ -1,0 +1,13 @@
+@use '../abstracts' as a;
+
+.container{
+
+    @include a.containerWidth(2rem);
+
+}
+
+.container-full{
+
+    @include a.containerWidth(0rem);
+
+}

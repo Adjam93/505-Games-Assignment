@@ -1,0 +1,58 @@
+@use '../abstracts' as a;
+
+footer{
+    margin-bottom: 2em;
+
+    .logos {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: end;
+        gap: 2em;
+        justify-content: center;
+        margin: 2em 0 1em;
+    }
+    .company-logos {
+        display: flex;
+        gap: 1em;
+    }
+
+    .credits{
+        color: #868686;
+        font-size: var(--fs-small);
+    }
+
+}
+
+#lightbox-overlay{
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1e;
+    z-index: 1;
+    opacity: 0.9;
+
+    &.open{
+        display: block;
+    }
+
+    .lightbox-close{
+
+        i {
+            position: absolute;
+            right: 0;
+            font-size: var(--fs-large);
+            padding: 0.5em;
+            cursor: pointer;
+            color: #d9d9d9;
+            transition: color 0.5s ease;
+
+            &:hover, &:focus{
+                color: #fff
+            }
+        }
+
+    }
+}
