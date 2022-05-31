@@ -11,7 +11,6 @@ p{
     @include a.atExtraSmall{
         font-size: calc( var(--fs-medium) * 1.25 );
     }
-    margin: 1.5em 0;
 
     .formats{
         display: block;
