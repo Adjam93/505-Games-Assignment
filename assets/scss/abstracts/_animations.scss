@@ -1,1 +1,50 @@
 @use 'mixins' as a;
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes shine {
+    100% {
+        transform: skewX(-25deg) translateX(250%);
+    }
+}
+
+@keyframes slideInLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+}
+
+@include a.atLarge{
+   
+    @keyframes slideInLeft {
+
+        from {
+            opacity: 0;
+            transform: translateX(-35%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+
+    }
+}

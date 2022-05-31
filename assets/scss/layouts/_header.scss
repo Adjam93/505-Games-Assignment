@@ -15,8 +15,13 @@ header{
             grid-template-columns: repeat(6, 1fr);
 
             li{
-
                 grid-column-start: span 2;
+
+                @for $i from 1 through 3 {
+                    &:nth-child(#{$i}) {
+                      animation: fadeInUp 0.5s + ( $i*285ms ) ease-out;
+                    }
+                }
 
                 &:first-child{
                     justify-self: end;
@@ -24,7 +29,6 @@ header{
                 &:last-child{
                     justify-self: start;
                 }
-
 
                 a{
                     color: var(--clr-accent);
@@ -38,4 +42,3 @@ header{
         }
     }
 }
-
